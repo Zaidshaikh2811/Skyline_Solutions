@@ -4,7 +4,10 @@
   "main": "service.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon service.js"
+     "dev": "nodemon service.js",
+    "start": "node service.js",
+    "prestart": "echo 'Starting Backend...'",
+    "test": "echo 'No test specified' && exit 0"
   },
   "keywords": [],
   "author": "",
