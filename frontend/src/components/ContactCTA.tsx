@@ -14,7 +14,7 @@ const ContactCTA = () => {
     setMessage(null);
 
     try {
-      const response = await axios.post("https://yourapi.com/contact", {
+      const response = await axios.post("https://skyline-solutions-1.onrender.com/send-email", {
         email,
         task,
       });

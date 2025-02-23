@@ -16,6 +16,8 @@ app.use(bodyParser.json());
 // Email Route
 app.post("/send-email", async (req, res) => {
     try {
+        console.log(req.body);
+
         const response = await sendEmail(req.body);
         res.status(200).json({ message: "Email sent successfully", info: response });
     } catch (error) {
