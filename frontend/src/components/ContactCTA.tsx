@@ -16,7 +16,8 @@ const ContactCTA = () => {
     try {
       const response = await axios.post("https://skyline-solutions-1.onrender.com/send-email", {
         sender: email,
-        subject: task,
+        subject: "New Request",
+        task,
       });
       setMessage("Your request has been submitted successfully!");
       setEmail("");
