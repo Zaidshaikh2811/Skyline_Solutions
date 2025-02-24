@@ -1,49 +1,60 @@
 import React from 'react';
 import { Code, Globe, Brain, Cloud, Shield, Zap, Cpu, Notebook as Robot, ShipIcon as ChipIcon } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
+
     icon: Code,
+    id: "CustomSoftwareDevelopment",
     title: 'Custom Software Development',
     description: 'Tailored solutions designed to meet your specific business requirements and drive growth.'
   },
   {
     icon: Globe,
+    id: "WebDevelopment",
     title: 'Web Development',
     description: 'Modern, responsive websites and web applications built with cutting-edge technologies.'
   },
   {
     icon: Brain,
+    id: "ITConsulting",
     title: 'IT Consulting',
     description: 'Strategic guidance to help you navigate digital transformation and technology adoption.'
   },
   {
     icon: Cloud,
     title: 'Cloud Solutions',
+    id: "CloudSolutions",
     description: 'Scalable cloud infrastructure and migration services for improved efficiency.'
   },
   {
     icon: Shield,
+    id: "Cybersecurity",
     title: 'Cybersecurity',
     description: 'Comprehensive security solutions to protect your business from evolving threats.'
   },
   {
     icon: Zap,
+    id: "ProcessAutomation",
     title: 'Process Automation',
     description: 'Streamline operations with intelligent automation solutions and workflows.'
   },
   {
     icon: Cpu,
+    id: "AIMachineLearning",
     title: 'AI & Machine Learning',
     description: 'Advanced AI solutions for predictive analytics, automation, and intelligent decision-making.'
   },
   {
     icon: Robot,
+    id: "IntelligentAutomation",
     title: 'Intelligent Automation',
     description: 'AI-powered RPA and workflow automation to transform business processes.'
   },
   {
     icon: ChipIcon,
+    id: "ComputerVision",
     title: 'Computer Vision',
     description: 'Advanced image recognition and processing solutions for automated visual analysis.'
   }
@@ -79,7 +90,7 @@ const Services = () => {
                     {service.description}
                   </p>
                   <div className="mt-4 flex items-center text-sm text-blue-600 dark:text-blue-400">
-                    <span className="hover:underline cursor-pointer">Learn more</span>
+                    <Link to={`services/${service.id}`} className="hover:underline cursor-pointer">Learn more</Link>
                     <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                     </svg>
