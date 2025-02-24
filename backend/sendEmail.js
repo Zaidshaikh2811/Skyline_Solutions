@@ -46,11 +46,10 @@ const transport = nodemailer.createTransport({
 
 export const sendEmail = async (data) => {
     const { sender, subject, task } = data;
-    console.log(sender, subject, task);
 
     return await transport.sendMail({
         from: sender,
-        to: "skylinesolution001@gmail.com",
+        to: "skylinesolution0001@gmail.com",
         subject,
         html: createTaskEmailTemplate(sender, task),
     });
